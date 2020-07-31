@@ -28,8 +28,6 @@ const Quotes = () => {
             {quotes.map(x => <Quote quote={x} />)}
         </div>
     );
-
-
 }
 
 export default Quotes;
