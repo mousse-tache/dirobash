@@ -1,7 +1,12 @@
 import React from "react";
+import { Link } from "gatsby"
 import PropTypes from "prop-types";
 
 const Quote = ({quote}) => { 
+
+    if(!quote) {
+        return 
+    }
 
     return (
         <div className="quote">
@@ -11,7 +16,7 @@ const Quote = ({quote}) => {
             </div>
             </blockquote>
             <p>
-                <a href="/quote/951.html">{quote?.number}</a> - <span class="date">{quote?.date}</span>
+                <Link to="/quote">#{quote?.number}</Link> - <span className="date">{quote?.date}</span>
             </p>
         </div>
     )

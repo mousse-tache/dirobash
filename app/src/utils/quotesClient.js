@@ -12,6 +12,10 @@ export class QuotesClient {
     submitQuote = (quote) => {
         return this._apiClient.post(`quote`, quote);
     };
+
+    getQuoteByNumber = (number) => {
+        return this._apiClient.get(`quote/${number}`)
+    }
 }    
 
 export default QuotesClient;

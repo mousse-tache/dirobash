@@ -11,6 +11,11 @@ const routes = [
     method: 'POST',
     url: '/api/quote',
     handler: quoteController.addQuote
+  },
+  {
+    method: 'GET',
+    url: '/api/quote/:number',
+    handler: quoteController.getQuoteByNumber
   }
 ]
 
