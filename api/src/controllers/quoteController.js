@@ -18,7 +18,7 @@ exports.addQuote = async (req, reply) => {
   try {
     const quoteModel = req.body
 
-    const quote = new Group(
+    const quote = new Quote(
     {
       ...quoteModel
     })
