@@ -11,7 +11,7 @@ const Quotes = () => {
         try {
             var data = await quotesClient.getQuotes();
 
-            if (data !== null) {
+            if (data !== null && data.length > 0) {
                 setQuotes(data);
             }
         } catch (error) {

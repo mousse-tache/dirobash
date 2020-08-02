@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Quote = ({quote}) => { 
 
     return (
-        <div class="quote">
+        <div className="quote">
             <blockquote>
             <div>
                 {quote?.text}
@@ -15,8 +15,6 @@ const Quote = ({quote}) => {
             </p>
         </div>
     )
-
-
 }
 
 Quote.propTypes = {

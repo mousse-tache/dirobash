@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const Header = () => (
   <header>
@@ -6,7 +7,7 @@ const Header = () => (
         <div className="options">
           <p>
             <a href="recherche.php">Recherche</a> - 
-            <a className="addquote" href="addquote.php">Ajouter une citation</a>
+            <a className="addquote" href="/addQuote">Ajouter une citation</a>
             - <span>
             Aucune citation en attente!			</span>
           </p>
