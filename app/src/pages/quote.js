@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import QuotesClient from "../utils/quotesClient"
 import { useLocation } from "@reach/router"
@@ -31,6 +32,11 @@ const QuotePage = () => {
     return (
     <Layout>
         <Quotes quotes={[quote]} />
+        <div className="pagination">
+            <p>
+                <Link to="/">Retour</Link>
+            </p>
+        </div>
     </Layout>
     );
 }
