@@ -7,7 +7,7 @@ const Quote = require('../models/Quote')
 // Get all quotes
 exports.getQuotes = async (req, reply) => {
   try {
-    const users = await Quote.find()
+    const users = await Quote.find().sort({$natural: -1})
     return users
   } catch (err) {
     throw boom.boomify(err)

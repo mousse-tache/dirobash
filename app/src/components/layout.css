@@ -55,6 +55,7 @@ header .options {
 	padding: 0;
 	margin: 5px;	
 	padding: 0 10px;
+	white-space: pre-line
 /*	background-image: url(quote-open.png), url(quote-close.png);
 	background-position: top left, bottom right;
 	background-repeat: no-repeat, no-repeat;*/
