@@ -16,7 +16,7 @@ const Quote = ({quote}) => {
             </div>
             </blockquote>
             <p>
-                <Link to="/quote">#{quote?.number}</Link> - <span className="date">{quote?.date}</span>
+                <Link to={`/quote?number=${quote?.number}`}>#{quote?.number}</Link> - <span className="date">{quote?.date}</span>
             </p>
         </div>
     )

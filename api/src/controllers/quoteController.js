@@ -30,13 +30,9 @@ exports.addQuote = async (req, reply) => {
 
 exports.getQuoteByNumber = async (req, reply) => {
   try {
-    const numb = req.params.number
+    const number = req.params.number
 
-    const quote = new Quote(
-    {
-      ...quoteModel
-    })
-    return quote.findOne({number: number})
+    return Quote.findOne({number: number})
   } catch (err) {
     throw boom.boomify(err)
   }
