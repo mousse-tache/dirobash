@@ -5,7 +5,7 @@ const Quotes = ({quotes}) => {
 
     return (
         <div className="quotes">
-            {quotes.map(x => <Quote quote={x} />)}
+            {quotes.map(x => <Quote key={x.number} quote={x} />)}
         </div>
     );
 }

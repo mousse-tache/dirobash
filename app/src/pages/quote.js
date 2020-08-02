@@ -8,29 +8,24 @@ import { parse } from "query-string"
 const QuotePage = () => {
     const location = useLocation()
     const [quote, setQuote] = useState({text: "Nothing to see here", date: new Date().toLocaleDateString(), number: 0})
-    var searchParams = parse(location.search)
     
-    console.log(location)
-    console.log(searchParams)
+    const quoteClient = new QuotesClient("");
 
-
-
-    const quoteClient = new QuotesClient();
-
-    useEffect(() => {
-        if(!searchParams?.number) {
-            return;
-        }
+    async function FetchQuote() {
         try {
-            var data = quoteClient.getQuoteByNumber(searchParams.number)
-    
-            if(data !== null) {
+            var searchParams = parse(location.search) 
+            var data = quoteClient.getQuoteByNumber(searchParams.number)  
+
+            if (data !== null) {
                 setQuote(data);
             }
-            
         } catch (error) {
-            console.log(error)
+            console.log("Oh well, we didn't even need those quotes anyways")
         }
+    }
+
+    useEffect(() => {    
+         FetchQuote();
     }, [])
 
     return (
