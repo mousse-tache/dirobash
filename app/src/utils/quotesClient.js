@@ -10,7 +10,7 @@ export class QuotesClient {
     }
 
     submitQuote = (quote) => {
-        return this._apiClient.post(`quote`, { quote });
+        return this._apiClient.post(`quote`, quote);
     };
 }    
 
