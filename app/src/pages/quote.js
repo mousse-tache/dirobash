@@ -14,8 +14,8 @@ const QuotePage = () => {
     async function FetchQuote() {
         try {
             var searchParams = parse(location.search) 
-            var data = quoteClient.getQuoteByNumber(searchParams.number)  
-
+            var data = await quoteClient.getQuoteByNumber(searchParams.number)  
+            
             if (data !== null) {
                 setQuote(data);
             }
@@ -25,7 +25,7 @@ const QuotePage = () => {
     }
 
     useEffect(() => {    
-         FetchQuote();
+        FetchQuote();
     }, [])
 
     return (
