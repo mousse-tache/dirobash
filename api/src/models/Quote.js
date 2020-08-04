@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 const quoteSchema = new mongoose.Schema({
   number: Number,
-  date: Date,
+  date: Date || Number,
   text: String
 })
 
