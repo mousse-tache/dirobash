@@ -37,3 +37,12 @@ exports.getQuoteByNumber = async (req, reply) => {
     throw boom.boomify(err)
   }
 }
+
+
+exports.getLatest = async (req, reply) => {
+  try {
+    return Quote.find().sort({number: -1}).limit(1);
+  } catch (err) {
+    throw boom.boomify(err)
+  }
+}
