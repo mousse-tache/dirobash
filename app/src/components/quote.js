@@ -8,6 +8,8 @@ const Quote = ({quote}) => {
         return 
     }
 
+    var date = quote?.number < 952 && quote?.number !== 0 ? new Date(new Date(quote?.date).getTime()*1000).toISOString() : quote?.date;
+
     return (
         <div className="quote">
             <blockquote>
@@ -16,7 +18,7 @@ const Quote = ({quote}) => {
             </div>
             </blockquote>
             <p>
-                <Link to={`/quote?number=${quote?.number}`}>#{quote?.number}</Link> - <span className="date">{new Date(quote?.date).toISOString()}</span>
+                <Link to={`/quote?number=${quote?.number}`}>#{quote?.number}</Link> - <span className="date">{date}</span>
             </p>
         </div>
     )
