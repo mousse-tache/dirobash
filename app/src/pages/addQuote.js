@@ -8,8 +8,8 @@ const AddQuote = () => {
     const [quote, setQuote] = useState({text:"", date: new Date(), number: 0});
 
     const setNumber = async() => {
-        var data = await quoteClient.getQuotes();
-        setQuote({...quote, number: data.length+1});
+        var data = await quoteClient.getLatest();
+        setQuote({...quote, number: data[0].number+1});
     }
 
     useEffect(() => {

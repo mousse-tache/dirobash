@@ -9,6 +9,10 @@ export class QuotesClient {
         return this._apiClient.get(`quotes`);
     }
 
+    getLatest = () => {
+        return this._apiClient.get(`quotes/latest`);
+    }
+
     submitQuote = (quote) => {
         return this._apiClient.post(`quote`, quote);
     };
