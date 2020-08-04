@@ -13,7 +13,7 @@ const routes = [
     handler: quoteController.addQuote
   },
   {
-    method: 'POST',
+    method: 'GET',
     url: '/api/quotes/latest',
     handler: quoteController.getLatest
   },
