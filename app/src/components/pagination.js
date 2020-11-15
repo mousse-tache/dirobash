@@ -26,6 +26,10 @@ const Pagination = ({currentPage, setPage}) => {
     }
 
     useEffect(() => {
+        if(!currentPage) {
+            setPage(1)
+        }
+
         defineRanges()
     }, [currentPage])
     
