@@ -6,8 +6,12 @@ const Quote = require('../models/Quote')
 
 // Get all quotes
 exports.getQuotes = async (req, reply) => {
+
+  const { page } = req.params
+  const skip = page > 1 ? page * 30 : 0
+
   try {
-    const users = await Quote.find().sort({number: -1})
+    const users = await Quote.find().sort({number: -1}).skip(skip).limit(30)
     return users
   } catch (err) {
     throw boom.boomify(err)

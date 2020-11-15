@@ -4,7 +4,7 @@ const quoteController = require('../controllers/quoteController')
 const routes = [
   {
     method: 'GET',
-    url: '/api/quotes',
+    url: '/api/quotes/:page',
     handler: quoteController.getQuotes
   },
   {

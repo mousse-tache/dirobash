@@ -5,8 +5,8 @@ export class QuotesClient {
         this._apiClient = new ApiClient({ baseURL: "https://dirobash.herokuapp.com/api/" });
     }
 
-    getQuotes = () => {
-        return this._apiClient.get(`quotes`);
+    getQuotes = (page) => {
+        return this._apiClient.get(`quotes/${page}`);
     }
 
     getLatest = () => {

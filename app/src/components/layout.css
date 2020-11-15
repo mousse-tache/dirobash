@@ -69,12 +69,13 @@ header .options {
 }
 
 a {
-	color: .0062BD;
+	color: #0062BD;
 	text-decoration: none;
 }
 
 a:hover {
 	text-decoration: underline; 
+	cursor:pointer;
 }
 
 .pagination {
