@@ -1,5 +1,5 @@
 body {
-	color:.444444;
+	color:#444444;
 	font-family:"Lucida Grande","Lucida Sans Unicode",Verdana,Arial,sans-serif;
 	font-size:13px;
 	line-height:1.5em;
@@ -22,7 +22,7 @@ header .logo {
 
 header .logo h1 {
 	padding-left: 10px;
-	text-shadow: 1px 1px 1px .000;
+	text-shadow: 1px 1px 1px #000;
 }
 
 /*.header .logo h1 span {
