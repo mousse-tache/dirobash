@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "dirobash-app",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A simple and dumb overengineered project to register quotes",
+  "version": "1.0.0",
+  "author": "Mousse",
   "dependencies": {
     "axios": "^0.21.1",
     "gatsby": "^2.23.12",
