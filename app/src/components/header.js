@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 
 const Header = () => (
   <header>
-    <div className="logo"><h1><a href="/"><span>DIRO Bash</span></a></h1></div>
+    <div className="logo"><h1><a href="/"><span className="text-2xl font-bold">DIRO Bash</span></a></h1></div>
         <div className="options">
           <p>
             <a href="recherche.php">Recherche</a> - 

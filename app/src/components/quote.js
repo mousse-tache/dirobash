@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "gatsby"
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Quote = ({quote}) => { 
 
@@ -8,7 +8,7 @@ const Quote = ({quote}) => {
         return 
     }
 
-    var date = quote?.number < 952 && quote?.number !== 0 ? new Date(new Date(quote?.date).getTime()*1000).toISOString() : quote?.date;
+    var date = quote?.number < 952 && quote?.number !== 0 ? new Date(quote?.date).toISOString() : quote?.date;
 
     return (
         <div className="quote">

@@ -1,46 +1,24 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
-import Pagination from "./pagination"
+import { Outlet } from "react-router-dom"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = () => {
   return (
     <>
       <Header/>            
       <div>
-        <main>{children}</main>        
+        <main>
+          <Outlet />  
+        </main>        
       </div>
       <footer>
           © {new Date().getFullYear()}, Rip-off from
           {` `}
-          <a target="_blank" href="http://dirobash.tolarian.com">Dirobash</a>
+          <a target="_blank" href="http://dirobash.tolarian.com" rel="noreferrer">Dirobash</a>
       </footer>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

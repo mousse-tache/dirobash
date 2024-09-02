@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
 	color:#444444;
 	font-family:"Lucida Grande","Lucida Sans Unicode",Verdana,Arial,sans-serif;
@@ -33,7 +37,7 @@ header .logo h1 {
  display: block;
  width: 250px;
  height: 141px;
- background: url(/cadhillac.gif) top right no-repeat;
+ background: url('./assets/cadhillac.gif') top right no-repeat;
 }*/
 
 header .options {
