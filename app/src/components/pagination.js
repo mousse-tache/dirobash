@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 const Pagination = ({currentPage, setPage, count}) => {
     const [lowerRange, setLowerRange] = useState([])
     const [higherRange, setHigherRange] = useState([])
-    const [maxPage, setMaxPage] = useState(Math.round(count/20)+1)
+    const [maxPage] = useState(Math.round(count/20)+1)
 
     const defineRanges = () => {
         var newLowerRange = []
