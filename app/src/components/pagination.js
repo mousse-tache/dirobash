@@ -35,7 +35,7 @@ const Pagination = ({currentPage, setPage, count}) => {
         }
 
         defineRanges()
-    }, [currentPage, count])
+    }, [currentPage])
     
     return (
         <div className="pagination">
@@ -43,12 +43,12 @@ const Pagination = ({currentPage, setPage, count}) => {
                 <span>Page: </span>
                 {currentPage <= 1 && <span className="first">«</span>}
                 {currentPage <= 1 && <span className="previous">&lt;</span>}
-                {currentPage > 1 && <a className="first" onClick={() => setPage(1)}>«</a>}
-                {currentPage > 1 && <a className="previous" onClick={() => setPage(currentPage-1)}>&lt;</a>}                
-                {lowerRange.map(x => <a key={x} onClick={() => setPage(x)}>{x}</a>)}
+                {currentPage > 1 && <a className="first" href={`?page=1`}>«</a>}
+                {currentPage > 1 && <a className="previous" href={`?page=${currentPage-1}`}>&lt;</a>}                
+                {lowerRange.map(x => <a key={x} href={`?page=${x}`}>{x}</a>)}
                 <span className="current">{currentPage}</span>
-                {higherRange.map(x => <a key={x} onClick={() => setPage(x)}>{x}</a>)}
-                {currentPage < maxPage && <a className="next" onClick={() => setPage(currentPage+1)}>&gt;</a>}
+                {higherRange.map(x => <a key={x} href={`?page=${x}`}>{x}</a>)}
+                {currentPage < maxPage && <a className="next" href={`?page=${currentPage+1}`}>&gt;</a>}
                 {currentPage >= maxPage && <span className="next">&gt;</span>}
                 {currentPage < maxPage && <a className="last" href={`?page=${maxPage}`}>»</a>}
             </p>
