@@ -3,39 +3,39 @@ import React, { useEffect, useState } from "react"
 const Pagination = ({currentPage, setPage, count}) => {
     const [lowerRange, setLowerRange] = useState([])
     const [higherRange, setHigherRange] = useState([])
-    const [maxPage] = useState(Math.round(count/20)+1)
-
-    const defineRanges = () => {
-        var newLowerRange = []
-        var newHigherRange = []
-
-        for (let index = currentPage - 4; index < currentPage; index++) {
-            if (index < 1) {
-                continue;
-            }
-
-            newLowerRange.push(index)            
-        }
-
-        for (let index = currentPage + 1; index <= currentPage + 4; index++) {
-            if (index > maxPage) {
-                continue;
-            }
-
-            newHigherRange.push(index)            
-        }
-
-        setLowerRange(newLowerRange)
-        setHigherRange(newHigherRange)
-    }
+    const [maxPage] = useState(Math.round(count/20)+1)    
 
     useEffect(() => {
-        if(!currentPage) {
-            setPage(1)
+        const defineRanges = () => {
+            if(!currentPage) {
+                setPage(1)
+            }
+    
+            var newLowerRange = []
+            var newHigherRange = []
+    
+            for (let index = currentPage - 4; index < currentPage; index++) {
+                if (index < 1) {
+                    continue;
+                }
+    
+                newLowerRange.push(index)            
+            }
+    
+            for (let index = currentPage + 1; index <= currentPage + 4; index++) {
+                if (index > maxPage) {
+                    continue;
+                }
+    
+                newHigherRange.push(index)            
+            }
+    
+            setLowerRange(newLowerRange)
+            setHigherRange(newHigherRange)
         }
 
         defineRanges()
-    }, [currentPage])
+    }, [currentPage, maxPage, setPage])
     
     return (
         <div className="pagination">
