@@ -13,6 +13,10 @@ export class QuotesClient {
         return this._apiClient.get(`citations/${page}`);
     }
 
+    searchQuotes = (text) => {
+        return this._apiClient.get(`citations/textsearch/${text}`);
+    }
+
     submitQuote = (quote) => {
         return this._apiClient.post(`citation`, quote);
     };
