@@ -18,7 +18,7 @@ export class QuotesClient {
     };
 
     getQuoteByNumber = (number) => {
-        return this._apiClient.get(`citation/${number}`)
+        return this._apiClient.get(`citation/number/${number}`)
     }
 }    
 
