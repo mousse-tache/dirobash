@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<IndexPage />} />
-        <Route path='/addQuote' element={<AddQuote />} />
+        <Route path='addQuote' element={<AddQuote />} />
       </Route>
     </Routes>
   );
