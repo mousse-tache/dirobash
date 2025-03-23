@@ -13,10 +13,6 @@ export class QuotesClient {
         return this._apiClient.get(`citations/${page}`);
     }
 
-    getLatest = () => {
-        return this._apiClient.get(`citations/latest`);
-    }
-
     submitQuote = (quote) => {
         return this._apiClient.post(`citation`, quote);
     };
