@@ -5,7 +5,6 @@ import QuotesClient from "../utils/quotesClient"
 import { useSearchParams } from "react-router-dom";
 
 const IndexPage = () => {
-
     const [quotes, setQuotes] = useState([{text: "Nothing to see here", date: new Date().toLocaleDateString(), number: 0}]);
     const [count, setCount] = useState(1);
     const [searchParams, setSearchParams] = useSearchParams();

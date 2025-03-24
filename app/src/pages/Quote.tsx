@@ -6,11 +6,11 @@ import { Link, useSearchParams } from "react-router-dom"
 const QuotePage = () => {    
     const [quote, setQuote] = useState({text: "Nothing to see here", date: new Date().toLocaleDateString(), number: 0})
       
+    const [searchParams] = useSearchParams();
 
     useEffect(() => {    
         async function FetchQuote() {
             try {
-                const [searchParams] = useSearchParams();
                 const quoteClient = new QuotesClient();  
 
                 let {data} = await quoteClient.getQuoteByNumber(searchParams.get("number") ?? 1)  
