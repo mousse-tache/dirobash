@@ -10,42 +10,10 @@ body {
 	background: #ddf0ff;
 }
 
-.quotes, header, .pagination, .add, .search, footer {
-	margin: 0 auto !important;
-	width: 75% !important;
-}
-
 .quotes, .add, .search, footer {
 	clear: both;
 }
 
-header .logo {
-	width: 30%;
-	float: left;
-}
-
-header .logo h1 {
-	padding-left: 10px;
-	text-shadow: 1px 1px 1px #000;
-}
-
-/*.header .logo h1 span {
- display: none;
-}*/
-
-/*.header .logo a {
- display: block;
- width: 250px;
- height: 141px;
- background: url('./assets/cadhillac.gif') top right no-repeat;
-}*/
-
-header .options {
-	width: 60%;
-	text-align: right;
-	float: right;
-	padding-right: 10px;
-}
 .quotes div.quote, .add, .search {
         border: 2px solid #fff;
 	background: #fff;
