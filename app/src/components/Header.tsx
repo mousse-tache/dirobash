@@ -11,7 +11,7 @@ const Header = () => (
     </div>
     <div className="flex flex-row gap-5">
       <a href="recherche">Recherche</a>
-      <a className="addquote" href="/addQuote">Ajouter une citation</a>
+      <a href="/addQuote">Ajouter une citation</a>
     </div>
   </header>
 )

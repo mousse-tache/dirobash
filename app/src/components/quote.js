@@ -8,7 +8,10 @@ const Quote = ({quote}) => {
         return 
     }
 
-    var date = quote?.number < 952 && quote?.number !== 0 ? new Date(quote?.date).toISOString() : quote?.date;
+    // this was to consider imported quotes on the previous database;
+    // var date = (quote?.number < 952 && quote?.number !== 0) || quote?.date >= "2020-05-01" ? new Date(quote?.date).toISOString() : quote?.date;
+
+    let date = new Date(quote?.date).toISOString();
 
     return (
         <div className="quote">
@@ -17,8 +20,10 @@ const Quote = ({quote}) => {
                 {quote?.text}
             </div>
             </blockquote>
-            <p>
-                <Link to={`/quote?number=${quote?.number}`}>#{quote?.number}</Link> - <span className="date">{date}</span>
+            <p className="flex gap-1">
+                <Link to={`/quote?number=${quote?.number}`}>#{quote?.number}</Link> 
+                -
+                <span className="date">{date}</span>
             </p>
         </div>
     )

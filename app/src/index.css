@@ -10,10 +10,6 @@ body {
 	background: #ddf0ff;
 }
 
-.quotes, .add, .search, footer {
-	clear: both;
-}
-
 .quotes div.quote, .add, .search {
         border: 2px solid #fff;
 	background: #fff;

@@ -40,8 +40,6 @@ const Pagination = ({currentPage, setPage, count}) => {
     return (
         <div className="pagination">
             <p>
-                <span>Page: </span>
-                {currentPage <= 1 && <span className="first">«</span>}
                 {currentPage <= 1 && <span className="previous">&lt;</span>}
                 {currentPage > 1 && <a className="first" href={`?page=1`}>«</a>}
                 {currentPage > 1 && <a className="previous" href={`?page=${currentPage-1}`}>&lt;</a>}                
