@@ -1,4 +1,5 @@
 import React from "react"
+import Recherche from "./Recherche"
 
 const Header = () => (
   <header className="flex flex-row align-center justify-between">
@@ -9,8 +10,8 @@ const Header = () => (
         </a>
       </h1>
     </div>
-    <div className="flex flex-row gap-5">
-      <a href="recherche">Recherche</a>
+    <div className="flex flex-row gap-5 items-center">
+      <Recherche />
       <a href="/addQuote">Ajouter une citation</a>
     </div>
   </header>

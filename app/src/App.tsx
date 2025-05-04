@@ -4,7 +4,6 @@ import Layout from './components/Layout';
 import IndexPage from './pages/IndexPage';
 import AddQuote from './pages/AddQuote.tsx';
 import Quote from './pages/Quote.tsx';
-import Recherche from './pages/Recherche.tsx';
 import SearchResults from './pages/SearchResults.tsx';
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
         <Route index element={<IndexPage />} />
         <Route path='addQuote' element={<AddQuote />} />
         <Route path='quote' element={<Quote />} />
-        <Route path='recherche' element={<Recherche />} />
         <Route path='searchResults' element={<SearchResults />} />
         <Route path='*' element={<IndexPage />} />
       </Route>
