@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import QuotesClient from "../utils/quotesClient"
-import Quotes from "../components/quotes"
+import Quotes from "../components/Quotes"
 import { Link, useSearchParams } from "react-router-dom"
 
 const QuotePage = () => {    

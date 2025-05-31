@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import QuotesClient from "../utils/quotesClient";
 import { useNavigate } from "react-router-dom";
+import Card from "../components/Card";
 
 const AddQuote = () => {
     const navigate = useNavigate();
@@ -20,15 +21,15 @@ const AddQuote = () => {
     }
 
     return (
-        <div className="add">
+        <Card>
             <form>
-                <h2 className="text-xl font-bold">Ajout d'une citation:</h2>
-                <p>
-                    <textarea rows={10} cols={80} name="quote" className="outline" value={quote} onChange={(e) => setQuote(e.target.value)} /><br />
+                <h2 className="text-xl font-bold text-center">Ajout d'une citation:</h2>
+                <p className="text-center">
+                    <textarea rows={10} cols={80} name="quote" className="drop-shadow-md outline m-auto w-7/10" value={quote} onChange={(e) => setQuote(e.target.value)} /><br />
                     <input type="button" value="Add Quote" onClick={submitQuote} />
                 </p>
             </form>
-        </div>
+        </Card>
     );
  }
 

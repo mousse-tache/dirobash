@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Pagination from "../components/pagination"
-import Quotes from "../components/quotes"
+import Quotes from "../components/Quotes"
 import QuotesClient from "../utils/quotesClient"
 import { useSearchParams } from "react-router-dom";
 

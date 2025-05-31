@@ -1,11 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Card from "./Card";
 
-const Quote = ({quote}) => { 
+const Quote = ({
+    quote
+  }: {
+    quote: {date: Date, text: String, number: Number}
+  }): React.ReactElement => {
 
     if(!quote) {
-        return 
+        return;
     }
 
     // this was to consider imported quotes on the previous database;
@@ -14,24 +18,17 @@ const Quote = ({quote}) => {
     let date = new Date(quote?.date).toISOString();
 
     return (
-        <div className="quote">
-            <blockquote>
-            <div>
+        <Card className="whitespace-pre-line flex flex-col divide-y-2 divide-gray-200 gap-2">
+            <blockquote className="p-2">
                 {quote?.text}
-            </div>
             </blockquote>
-            <p className="flex gap-1">
+            <p className="flex gap-1 p-2">
                 <Link to={`/quote?number=${quote?.number}`}>#{quote?.number}</Link> 
                 -
                 <span className="date">{date}</span>
             </p>
-        </div>
+        </Card>
     )
 }
-
-Quote.propTypes = {
-    quote: PropTypes.object
-}
-
 
 export default Quote;

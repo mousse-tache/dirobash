@@ -38,17 +38,17 @@ const Pagination = ({currentPage, setPage, count}) => {
     }, [currentPage, maxPage, setPage])
     
     return (
-        <div className="pagination">
-            <p>
+        <div className="m-5 text-center">
+            <p className="flex flex-row gap-1 justify-center">
                 {currentPage <= 1 && <span className="previous">&lt;</span>}
-                {currentPage > 1 && <a className="first" href={`?page=1`}>«</a>}
-                {currentPage > 1 && <a className="previous" href={`?page=${currentPage-1}`}>&lt;</a>}                
-                {lowerRange.map(x => <a key={x} href={`?page=${x}`}>{x}</a>)}
+                {currentPage > 1 && <a className="first no-underline hover:underline decoration-solid" href={`?page=1`}>«</a>}
+                {currentPage > 1 && <a className="previous no-underline hover:underline decoration-solid" href={`?page=${currentPage-1}`}>&lt;</a>}                
+                {lowerRange.map(x => <a className="no-underline hover:underline decoration-solid" key={x} href={`?page=${x}`}>{x}</a>)}
                 <span className="current">{currentPage}</span>
-                {higherRange.map(x => <a key={x} href={`?page=${x}`}>{x}</a>)}
-                {currentPage < maxPage && <a className="next" href={`?page=${currentPage+1}`}>&gt;</a>}
+                {higherRange.map(x => <a className="no-underline hover:underline decoration-solid" key={x} href={`?page=${x}`}>{x}</a>)}
+                {currentPage < maxPage && <a className="next no-underline hover:underline decoration-solid" href={`?page=${currentPage+1}`}>&gt;</a>}
                 {currentPage >= maxPage && <span className="next">&gt;</span>}
-                {currentPage < maxPage && <a className="last" href={`?page=${maxPage}`}>»</a>}
+                {currentPage < maxPage && <a className="last no-underline hover:underline decoration-solid" href={`?page=${maxPage}`}>»</a>}
             </p>
         </div>
     )
