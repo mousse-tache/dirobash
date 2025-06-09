@@ -2,20 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	color:#444444;
-	font-family:"Lucida Grande","Lucida Sans Unicode",Verdana,Arial,sans-serif;
-	font-size:13px;
-	line-height:1.5em;
-	background: #ddf0ff;
-}
+@layer base {
+	a {
+		@apply no-underline hover:underline hover:cursor-pointer text-pink-900;
+	}
 
-a {
-	color: #0062BD;
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline; 
-	cursor:pointer;
+	body {
+		@apply font-sans text-base leading-normal bg-pink-100;
+	}
 }

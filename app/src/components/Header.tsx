@@ -6,7 +6,7 @@ const Header = () => (
     <div>
       <h1>
         <a href="/">
-          <span className="text-2xl font-bold">DIRO Bash</span>
+          <span className="text-2xl font-bold">dirobash</span>
         </a>
       </h1>
     </div>
