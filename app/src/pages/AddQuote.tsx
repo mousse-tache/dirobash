@@ -25,7 +25,7 @@ const AddQuote = () => {
             <form>
                 <h2 className="text-xl font-bold text-center">Ajout d'une citation:</h2>
                 <p className="text-center">
-                    <textarea rows={10} cols={80} name="quote" className="drop-shadow-md outline m-auto w-7/10" value={quote} onChange={(e) => setQuote(e.target.value)} /><br />
+                    <textarea rows={10} cols={80} name="quote" className="drop-shadow-md outline m-auto w-7/10 dark:bg-slate-800" value={quote} onChange={(e) => setQuote(e.target.value)} /><br />
                     <input type="button" value="Add Quote" onClick={submitQuote} />
                 </p>
             </form>
