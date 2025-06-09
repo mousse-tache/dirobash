@@ -20,7 +20,7 @@ const Recherche = () => {
 
     return (
         <form className="w-fit overflow-hidden rounded flex flex-row items-center">
-            <input type="text" className="rounded" value={searchText} onChange={(e) => setSearchText(e.target.value)} onKeyDown={async(e) => await handleKeyDown(e)} /> 
+            <input type="text" className="rounded dark:bg-slate-700" value={searchText} onChange={(e) => setSearchText(e.target.value)} onKeyDown={async(e) => await handleKeyDown(e)} /> 
             <MagnifyingGlassIcon className="size-5 -ml-8 z-5 stroke-4 cursor-pointer" onClick={async() => await searchQuote()} />
         </form>
     );

@@ -4,10 +4,10 @@
 
 @layer base {
 	a {
-		@apply no-underline hover:underline hover:cursor-pointer text-pink-900;
+		@apply no-underline hover:underline hover:cursor-pointer text-pink-900 dark:text-pink-400;
 	}
 
 	body {
-		@apply font-sans text-base leading-normal bg-pink-100;
+		@apply font-sans text-base leading-normal bg-pink-100 dark:text-white dark:bg-slate-800;
 	}
 }
