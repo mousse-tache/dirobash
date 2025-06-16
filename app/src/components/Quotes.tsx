@@ -8,7 +8,7 @@ const Quotes = ({
   }): React.ReactElement => {
 
     return (
-        <div className="gap-5 flex flex-col align-center justify-between">
+        <div className="gap-5 flex flex-col align-center justify-between opacity-85">
             {quotes.map(x => <Quote key={x.number} quote={x} />)}
         </div>
     );

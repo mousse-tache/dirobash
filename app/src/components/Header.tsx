@@ -2,7 +2,7 @@ import React from "react"
 import Recherche from "./Recherche"
 
 const Header = () => (
-  <header className="flex flex-row align-center justify-between">
+  <header className="flex flex-row align-center justify-between z-10">
     <div>
       <h1>
         <a href="/">
