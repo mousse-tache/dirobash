@@ -7,8 +7,12 @@ import { useKonamiCode } from "../custom-hooks/useKonamiCode"
 const Layout = () => {
   const konamicode = useKonamiCode();
 
+  const random = Math.floor(Math.random() * 2);
+
+  const cursors = ["cursor-gabceal", "cursor-gabcdeer"];
+
   return (
-    <div className={`flex flex-col gap-3 w-3/4 m-auto mt-3 ${konamicode && "cursor-gabceal"}`}>
+    <div className={`flex flex-col gap-3 w-3/4 m-auto mt-3 ${konamicode && cursors[random]}`}>
       <Header/>            
       <div>
         <main>
