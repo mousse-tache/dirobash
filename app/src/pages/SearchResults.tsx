@@ -5,20 +5,17 @@ import QuotesClient from "../utils/quotesClient"
 import { useSearchParams } from "react-router-dom";
 
 import GabcBegin from '../assets/gabc-begins.mp4'
+import { useSearchParameter } from "../custom-hooks/useParams";
 
 const SearchResults = () => {
     const [quotes, setQuotes] = useState([{text: "Nothing to see here", date: new Date().toLocaleDateString(), number: 0}]);
     const [count, setCount] = useState(1);
     const [searchParams, setSearchParams] = useSearchParams();
-    const [searchText, setSearchtext] = useState("");
+    const searchText = useSearchParameter("q");
 
     async function setPage(pageNumber: string) {
       setSearchParams({"page":pageNumber})
     }
-
-    useEffect(() => {
-      setSearchtext(searchParams.get("q"));
-    },[searchParams])
 
     useEffect(() => {
         async function FetchQuotes() {

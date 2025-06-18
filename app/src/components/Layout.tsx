@@ -2,10 +2,13 @@ import React from "react"
 
 import Header from "./Header"
 import { Outlet } from "react-router-dom"
+import { useKonamiCode } from "../custom-hooks/useKonamiCode"
 
 const Layout = () => {
+  const konamicode = useKonamiCode();
+
   return (
-    <div className="flex flex-col gap-3 w-3/4 m-auto mt-3">
+    <div className={`flex flex-col gap-3 w-3/4 m-auto mt-3 ${konamicode && "cursor-gabceal"}`}>
       <Header/>            
       <div>
         <main>

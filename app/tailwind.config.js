@@ -4,8 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      cursor: {
+        gabceal: 'url(assets/gabceal-cursor.gif), crosshair',
+      },
+    },
   },
   plugins: [],
 }
-
