@@ -17,7 +17,7 @@ export const useSecretCode = (secretCode) => {
     if (count + 1 === secretCode.length) {
       setSuccess(true);
     }
-  }, [key]);
+  }, [key]); // eslint-disable-line react-hooks/exhaustive-deps
   
   return success;
 };
