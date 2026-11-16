@@ -19,7 +19,7 @@ const Quote = ({
 
     return (
         <Card className="whitespace-pre-line flex flex-col divide-y-2 divide-gray-200 gap-2">
-            <blockquote className="p-2">
+            <blockquote className="p-2 break-normal">
                 {quote?.text}
             </blockquote>
             <p className="flex gap-1 p-2">

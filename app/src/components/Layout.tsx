@@ -2,7 +2,7 @@ import React from "react"
 
 import Header from "./Header"
 import { Outlet } from "react-router-dom"
-import { useKonamiCode } from "../custom-hooks/useKonamiCode"
+import { useKonamiCode } from "../custom-hooks/useSecretCode"
 
 const Layout = () => {
   const konamicode = useKonamiCode();
