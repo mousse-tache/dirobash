@@ -18,7 +18,7 @@ const Quote = ({
     let date = new Date(quote?.date).toISOString();
 
     return (
-        <Card className="whitespace-pre-line w-max flex flex-col divide-y-2 divide-gray-200 gap-2">
+        <Card className="whitespace-pre-line flex flex-col divide-y-2 divide-gray-200 gap-2">
             <blockquote className="p-2 break-normal">
                 {quote?.text}
             </blockquote>
